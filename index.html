@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Virtual Assistant — Portfolio</title>
+  <meta name="description" content="Portfolio for a professional virtual assistant — services, samples, tools, and contact." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#7c5cff;
+      --glass: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),#071027 120%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px;
+    }
+    .container{max-width:980px;margin:0 auto;}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#42b3ff);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .name{font-size:18px;font-weight:600}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    nav a:hover{color:#fff}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 360px;gap:28px;margin-bottom:36px;align-items:center
+    }
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    .intro h1{margin:0 0 8px 0;font-size:28px}
+    .intro p{margin:0;color:var(--muted)}
+    .cta{margin-top:16px;display:flex;gap:10px}
+    .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .profile{display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
+    .avatar{width:120px;height:120px;border-radius:14px;background:linear-gradient(180deg,#ffffff08,#00000020);display:flex;align-items:center;justify-content:center;font-size:42px}
+    .quick-stats{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .stat{background:var(--glass);padding:8px 12px;border-radius:10px;font-size:13px;color:var(--muted)}
+
+    section{margin-bottom:26px}
+    h2{margin:0 0 12px 0;font-size:18px}
+
+    .services{display:flex;gap:12px;flex-wrap:wrap}
+    .service{flex:1 1 220px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:16px;border-radius:12px}
+    .service h3{margin:0 0 6px 0;font-size:15px}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .project h4{margin:0 0 8px 0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--muted)}
+
+    .tools{display:flex;gap:8px;flex-wrap:wrap}
+    .tool{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
+
+    .testimonials{display:flex;flex-direction:column;gap:10px}
+    .test{padding:12px;border-radius:12px;background:rgba(0,0,0,0.18);}
+    .test p{margin:8px 0 0 0;color:var(--muted)}
+
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:12px}
+    form label{display:block;font-size:13px;margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .projects-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">VA</div>
+        <div>
+          <div class="name">PETER UDECHUKWU— Virtual Assistant</div>
+          <div class="small">Reliable. Organized. Ready to help.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card intro">
+          <h1>Hi — I am udechukwu peter. I help busy founders & small teams stay organized.</h1>
+          <p>I handle the day-to-day so you can focus on the big picture. Email & calendar management, client communication, research, social scheduling, and more.</p>
+          <div class="cta">
+            <a class="btn" href="#contact">Work with me</a>
+            <a class="btn secondary" href="#projects">See Projects</a>
+          </div>
+
+          <section id="about" style="margin-top:18px">
+            <h2>Snapshot</h2>
+            <p class="small">Organized, proactive, fast learner. I prioritize clear communication and tidy systems so nothing slips through the cracks.</p>
+          </section>
+        </div>
+
+        <aside class="card profile">
+          <div class="avatar">UD</div>
+          <div style="font-weight:600">PETER UDECHUKWU</div>
+          <div class="small">Virtual Assistant • Remote</div>
+          <div class="quick-stats">
+            <div class="stat">5+ years experience</div>
+            <div class="stat">Avg response: 1–2 minutes</div>
+            <div class="stat">Preferred: startups, solopreneurs, E-commerce CEO</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="services" class="card">
+        <h2>Services I offer</h2>
+        <div class="services">
+          <div class="service">
+            <h3>Email & Calendar Management</h3>
+            <p>Inbox triage, priority flags, response templates, calendar scheduling and time blocking.</p>
+          </div>
+          <div class="service">
+            <h3>Client Support & Communication</h3>
+            <p>Customer replies, intake forms, escalation notes, and help-center style documentation.</p>
+          </div>
+          <div class="service">
+            <h3>Social + Content Ops</h3>
+            <p>Scheduling, simple graphics, caption writing and a weekly content planner.</p>
+          </div>
+          <div class="service">
+            <h3>Research & Ops</h3>
+            <p>Market research, competitor summaries, travel planning, and vendor comparison spreadsheets.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>My projects</h2>
+        <div class="projects-grid">
+          <article class="project card">
+            <h4>Inbox Triage — Launch Week</h4>
+            <p>Created an inbox system: labels, canned replies, priority routing. Reduced unread messages by 92% in a week .</p>
+            <div class="tags"><span class="tag">Gmail</span><span class="tag">Templates</span><span class="tag">Workflow</span></div>
+          </article>
+
+          <article class="project card">
+            <h4>Weekly Social Plan</h4>
+            <p>8-post weekly schedule with captions, brief designs and publishing calendar exported as CSV .</p>
+            <div class="tags"><span class="tag">Canva</span><span class="tag">Google Sheets</span><span class="tag">Buffer</span></div>
+          </article>
+
+          <article class="project card">
+            <h4>Client Support Knowledge Base</h4>
+            <p>Short internal SOP and an FAQ that reduced response steps from 7 to 3 .</p>
+            <div class="tags"><span class="tag">Notion</span><span class="tag">SOP</span></div>
+          </article>
+
+          <article class="project card">
+            <h4>Research Brief — Competitor Snapshot</h4>
+            <p>One-page summary with top 5 competitors, pricing notes and recommended action items .</p>
+            <div class="tags"><span class="tag">Research</span><span class="tag">Analysis</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Tools I use</h2>
+        <div class="tools">
+          <span class="tool">Google Workspace</span>
+          <span class="tool">Notion</span>
+          <span class="tool">Trello / Asana</span>
+          <span class="tool">Canva</span>
+          <span class="tool">Zapier / Make</span>
+          <span class="tool">Slack</span>
+          <span class="tool">Zoom</span>
+          <span class="tool">Microsoft Workspace</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+          <div class="test">
+            <strong>Irene Ebenizer., Founder(KokoroTech)</strong>
+            <p class="small">"Fast, detail-oriented and great communication. Helped me keep launch week organized."</p>
+          </div>
+
+          <div class="test">
+            <strong>Jude Mogudu., Consultant</strong>
+            <p class="small">"Clear templates and tidy processes — saved me hours every week."</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <p class="small">Interested in working together? Tell me a bit about your needs — timeline, scope and any tools you want me to use.</p>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+              <label for="name">Name</label>
+              <input id="name" name="name" required placeholder="Your name" />
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Brief description of the work"></textarea>
+
+              <div style="margin-top:10px;display:flex;gap:8px;align-items:center">
+                <button class="btn" type="submit">Send message</button>
+                <a class="btn secondary" href="mailto:udpeter196@gmail.com">Email directly</a>
+              </div>
+            </form>
+          </div>
+
+          <aside class="small">
+            <div style="font-weight:600;margin-bottom:8px">Availability & rates</div>
+            <p class="small">Typical engagement: retainer (10–40 hrs/week) or project-based. Hourly and fixed-price work welcome. Rates vary by scope — message me and I’ll share a tailored estimate.</p>
+            <div style="margin-top:10px">
+              <div class="small" style="font-weight:600">Quick links</div>
+              <div class="small"><a href="#projects">Samples</a> • <a href="#services">Services</a> • <a href="#contact">Contact</a></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>Made with care • PETER UDECHUKWU• <span class="small">Available remotely</span></div>
+    </footer>
+  </div>
+</body>
+</html>
+
+
